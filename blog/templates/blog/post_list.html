@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	{% for post in posts %}
+		<div class="post">
+			<div class="date">
+				<!-- <p>published: {{ post.published_date }}</p> -->
+				{{ post.published_date }}
+			</div>	
+				<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+				<p>{{ post.text | linebreaksbr }}</p>
+		</div>	
+	{% endfor %}
+{% endblock %}		
+					<!-- <p>published: 6.08.2020, 16:00</p>
+					<h2><a href="">My first post</a></h2>
+					<p>This is taken from the Django Girls tutorial.</p>
+				</div>
+
+				<div>
+					<p>published: 6.08.2020, 16:00</p>
+					<h2><a href="">My Second post</h2>
+					 --><!-- <p>This is taken from the Django Girls tutorial 2.</p>	 -->
+				<!-- </div>
+					
+				
+		</div>
+	</div>				
+</body>
+</html> -->
